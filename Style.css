@@ -88,16 +88,16 @@ nav .menu-link{
       padding: 0 20px;
       display: none;
 }
-
+/*Mobile responsive design*/
 @media screen and (max-width: 819px){
   nav a{
     margin-top: 2rem;
     height: 10px;
-
-
+  }
+  nav .logo{ /* styling for my name logo */
+    padding-left: 3rem;
   }
   .links-container{
-
     flex-direction: column; /* when responsive our Nav bar it will be column*/
     align-items: flex-start;
     /* Styling the sidebar */
@@ -110,7 +110,6 @@ nav .menu-link{
     background-color: var(--color-1);
     box-shadow: -6px 0 5px rgba(0, 0, 0, 0.25);
     transition: 0.75s ease-out; /*  animation for the sidebar*/
-
   }
   nav i{
     color: var(--text-color);
@@ -123,15 +122,73 @@ nav .menu-link{
   #SideBar-active:checked ~ .links-container{
       right: 0; /*  this is to show the sidebar */
   }
-
-  #SideBar-active:checked ~ #overlay{ /* this is to set the overlay so when user clicked it will close the nav bar*/
+ /* this is to set the overlay so when user clicked it will close the nav bar*/
+  #SideBar-active:checked ~ #overlay{
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
-
-
   }
+}
+/* Home page content */
+.portfolio{
+  padding-top: 2vh;
+  height: 70vh;
+  margin: 0 0.5rem;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: fit-content;
+  display: flex;
+}
+.Profile-picture{
+  display: flex;
+  height: 500px;
+  width: 500px;
+  margin: auto 0 ;
+  margin-left: 2rem;
+}
+.content{
+  align-self: center;
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+.text-p{
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 0.2rem;
+}
+.text-h1{
+  text-align: center;
+  font-size: 3rem;
+}
+.text-span{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.btn-container{
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.btn-cv{
+  font-weight: 800;
+  background: var(--color-1);
+  color: var(--text-color);
+  font-weight: 600px;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 2rem;
+}
+.btn-cv:active{
+  transform: scale(0.95);
+}
+.btn-cv:hover{
+  background: #333;
+  border-color: aliceblue;
+  color: white;
 }
