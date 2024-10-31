@@ -81,13 +81,57 @@ nav .menu-link{
   margin-right: auto;
 }
 /* hiding icons to make it responsive */
-nav i{
-  fill: var(--text-color); /* fill color for icons*/
-}
 #SideBar-active{
-  display: none;
+  display: none; /* this is to hide the label box when its on desktop mode*/
 }
 .open-sidebar-btn, .close-sidebar-btn{
       padding: 0 20px;
       display: none;
+}
+
+@media screen and (max-width: 819px){
+  nav a{
+    margin-top: 2rem;
+    height: 10px;
+
+
+  }
+  .links-container{
+
+    flex-direction: column; /* when responsive our Nav bar it will be column*/
+    align-items: flex-start;
+    /* Styling the sidebar */
+    position: fixed;
+    gap: 2rem;
+    top: 0;
+    right: -100%; /*  this is to hide the sidebar */
+    z-index: 10;
+    width: 220px;
+    background-color: var(--color-1);
+    box-shadow: -6px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out; /*  animation for the sidebar*/
+
+  }
+  nav i{
+    color: var(--text-color);
+  }
+  .open-sidebar-btn, .close-sidebar-btn{
+    padding: 20px;
+    display: block; /*  this is to show the icons when its on mobile mode*/
+  }
+  /* using pseudo class for checked (Boolean T or F)*/
+  #SideBar-active:checked ~ .links-container{
+      right: 0; /*  this is to show the sidebar */
+  }
+
+  #SideBar-active:checked ~ #overlay{ /* this is to set the overlay so when user clicked it will close the nav bar*/
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+
+
+  }
 }
