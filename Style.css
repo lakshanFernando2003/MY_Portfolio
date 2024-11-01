@@ -124,6 +124,7 @@ nav .menu-link{
   .links-container{
     flex-direction: column; /* when responsive our Nav bar it will be column*/
     align-items: flex-start;
+    padding-top: 0rem;
     /* Styling the sidebar */
     position: fixed;
     gap: 2rem;
@@ -307,7 +308,7 @@ nav .menu-link{
   }
 }
 
-/*footer section*/
+/*footer sPection*/
 HR{
   margin-top: 0;
 }
@@ -339,7 +340,7 @@ HR{
   color: darkgrey;
 }
  /*About page*/
- .about{
+ .about{ /* styling background for about page*/
   margin-top: 1rem;
   background: #f2f2f2;
   padding-left: 10rem;
@@ -352,13 +353,21 @@ HR{
   font-size: 2.5rem;
   font-weight: 600;
 }
+.about-pic{
+  display: flex;
+  height: 600px;
+  width: 600px;
+  margin: auto;
+  box-shadow: 8px 1px 14px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+}
 .about-p{
   padding-left: 15px;
-  font-size: 2.65rem;
-  font-weight: 300;
+  font-size: 2.75rem;
+  font-weight: 400;
 }
 .text-about-me{
-  margin-right: 10rem;
+  margin-right: 0rem;
   text-align: justify;
   justify-content: center;
   font-size: 1.27rem;
@@ -392,8 +401,29 @@ HR{
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 5px; /* border radius  */
   border-left: 5px solid #4caf50;
   margin: 20px 0;
   display: inline-block;
+}
+.languages{
+  font-size: 1.5rem;
+  text-align: left;
+  padding-bottom:10px ;
+}
+.language-container{
+  display: flex;
+  margin-right: 30rem;
+  height: 5rem;
+  justify-content: center;
+  border-radius: 10px; /* border radius */
+  gap: 1px;
+  border: rgb(89, 91, 92)  1px solid; /*  border styling  and shadow Styling*/
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.29), 0 6px 25px 0 rgba(0, 0, 0, 0.39);
+}
+.lang-icons{
+  text-align: center;
+  border: rgba(89, 91, 92)  1px solid;
+  font-size: 50px;
+  flex: 1;
 }
