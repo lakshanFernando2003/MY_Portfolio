@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY Contact</title>
+  <script src="https://kit.fontawesome.com/96fec09fbf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">Lakshan</div>  <!-- Logo -->
+    <!-- SideBar Toggle -->
+    <input type="checkbox" id="SideBar-active">
+    <label for="SideBar-active" class="open-sidebar-btn">
+      <i class="fa-solid fa-bars" ></i>
+    </label>
+    <label for="SideBar-active" id="overlay"></label>
+      <!-- SideBar  menu Links -->
+    <div class="links-container">
+        <label for="SideBar-active" class="close-sidebar-btn">
+          <i class="fa-solid fa-xmark" ></i>
+        </label>
+        <a class="menu-link" href="HOME.html">Home</a>
+        <a class="menu-link" href="About.html">About</a>
+        <a class="menu-link" href="Blogs.html">Blogs</a>
+        <a class="menu-link" href="contact.html">Contact</a>
+      </div>
+  </nav>
+
+  <!-- Contact page content-->
+   <section class="contact_Form">
+    <section class="contact" >
+      <div class="content">
+        <h2>Contact Me</h2>
+        <p>Feel free to contact me</p>
+      </div>
+      <div class="container">
+        <div class="contactInfo">
+          <div class="box">
+            <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>346/1/2, Galle Road, Mount Lavinia <br>Sri Lanka</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i class="fa-solid fa-phone" style="color: #000000;"></i></div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>(+94)-74338966</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="icon"><i class="fa-regular fa-envelope" style="color: #000000;"></i></div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>Lakshanchanaka34@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="contactForm">
+          <form action="submit.php" method="POST">
+            <h2>Send Message</h2>
+            <div class="inputBox">
+              <input type="text" name="name" required="required">
+              <span>Full Name</span>
+            </div>
+            <div class="inputBox">
+              <input type="email" name="email" required="required">
+              <span>Email</span>
+            </div>
+            <div class="inputBox">
+              <input type="tel" name="telephone" required="required">
+              <span>telephone</span>
+            </div>
+            <div class="inputBox">
+              <textarea name="message" required="required"></textarea>
+              <span>Type your message...</span>
+            </div>
+            <div class="inputBox">
+              <input type="submit" value="Send">
+              <input type="reset" value="Delete">
+            </div>
+          </form>
+        </div>
+      </div>
+
+
+
+    </section>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer-content">
+    <HR></HR>
+    <p class="footer-p"> 2024  |  Designed by Lakshan</p>
+    <div class="social-media-links">
+      <ul>
+        <li><a href="#"><i class="fa-brands fa-square-github"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

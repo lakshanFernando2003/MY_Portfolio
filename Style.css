@@ -40,9 +40,9 @@
   padding: 0;
 }
 html, body{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; */
   font-size: 12pt;
   font-family: poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -282,7 +282,7 @@ HR{
 }
  /*About page*/
  .about{ /* styling background for about page*/
-  background: var(--color-1);
+  background: #f2f2f2;
   border-radius: 10px;
   margin-top: 1rem;
   background: #f2f2f2;
@@ -371,6 +371,168 @@ HR{
   flex: 1;
 }
 
+/* Contact page*/
+.contact_Form{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+}
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.content{
+  margin-bottom: 5rem;
+}
+
+.contact .content{
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2{
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.contact .content p{
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--text-color);
+}
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.container .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.container .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.container .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container .contactInfo .box::before{
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+.container .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: var(--color-1);
+  flex-direction: column;
+  font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+  font-size: 2rem;
+  font-weight: 500;
+  color: #00bcd4;
+}
+.container .contactInfo .box .text p{
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-1);
+}
+.contactForm{
+  width: 50%;
+  height: 400px;
+  padding: 40px;
+  border-radius:5px ; /* border radius*/
+  background: #fff;
+}
+.contactForm h2{
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+ /* this is for the validation AND ANIMATIONS*/
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+  color: #00bcd4;
+  font-size: 12px;
+  transform: translateY(-20px); /* transform TEXT move up*/
+}
+
+.contactForm .inputBox input[type="submit"]{
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.contactForm .inputBox input[type="submit"]:hover{
+  background:var(--color-1);
+}
+.contactForm .inputBox input[type="reset"]{
+  width: 100px;
+  background: #d90000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+.contactForm .inputBox input[type="reset"]:hover{
+  background:var(--color-1);
+}
+
 
 
 
@@ -420,7 +582,7 @@ HR{
     margin: auto;
     margin-bottom: 1rem;
     padding: 2rem;
-    background: var(--color-1);
+    background: #f2f2f2;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   }
@@ -505,7 +667,7 @@ HR{
     width: 85%;
     margin: auto;
     padding: 1rem;
-    background: var(--color-1);
+    background: #f2f2f2;
     border-radius: 10px;
 
   }
@@ -649,3 +811,5 @@ HR{
     text-align: justify; /* Justifies text for cleaner alignment */
   }
 }
+
+@media(max-width: 991px)
