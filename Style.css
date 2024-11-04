@@ -1036,7 +1036,7 @@ li[title~="project"] {
 .contactForm .inputBox input[type="text"]:valid {
   border-color: var(--valid-color);
 }
-.contactForm .inputBox input[type="text"]:invalid {
+.contactForm .inputBox input[type="text"]:focus:invalid {
   border-color: var(--invalid-color);
 }
 
@@ -1044,7 +1044,7 @@ li[title~="project"] {
 .contactForm .inputBox input[type="email"]:valid {
   border-color: var(--valid-color);
 }
-.contactForm .inputBox input[type="email"]:invalid {
+.contactForm .inputBox input[type="email"]:focus:invalid {
   border-color: var(--invalid-color);
 }
 
@@ -1052,7 +1052,7 @@ li[title~="project"] {
 .contactForm .inputBox input[type="tel"]:valid {
   border-color: var(--valid-color);
 }
-.contactForm .inputBox input[type="tel"]:invalid {
+.contactForm .inputBox input[type="tel"]:focus:invalid {
   border-color: var(--invalid-color);
 }
 
@@ -1060,7 +1060,7 @@ li[title~="project"] {
 .contactForm .inputBox textarea:valid {
   border-color: var(--valid-color);
 }
-.contactForm .inputBox textarea:invalid {
+.contactForm .inputBox textarea:focus:invalid {
   border-color: var(--invalid-color);
 }
 
