@@ -63,7 +63,7 @@
           <form action="submit.php" method="POST">
             <h2>Send Message</h2>
             <div class="inputBox">
-              <input type="text" name="name" required="required">
+              <input type="text" name="name" required="required" required pattern="[A-Za-z\s]+" required minlength="3" maxlength="50">
               <span>Full Name</span>
             </div>
             <div class="inputBox">
@@ -75,7 +75,7 @@
               <span>telephone</span>
             </div>
             <div class="inputBox">
-              <textarea name="message" required="required"></textarea>
+              <textarea name="message" required="required"  required minlength="10" maxlength="500"></textarea>
               <span>Type your message...</span>
             </div>
             <div class="inputBox">
@@ -90,7 +90,7 @@
 
     </section>
    </section>
-   
+
   <!-- Footer -->
 
   <footer class="footer-content">

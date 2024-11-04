@@ -34,6 +34,8 @@
   --color-1: #0f1016;
   --text-color: #8a8a8a;
   --accent-color: #006aff;
+  --invalid-color: #dc3545;
+  --valid-color: #28a745
 }
 *{
   margin: 0;
@@ -73,6 +75,24 @@ nav{
   gap: 2.5rem; /* gap between  menu links*/
   flex-direction: row; /* set row because when responsive it will be column*/
   align-items: center;
+}
+/* using relational selectors "> - child combinator*/
+.links-container > .menu-link{
+    font-weight: bold;
+    color: var(--text-color);
+    text-shadow: #a6abbb 1px 1.5px 1px; /* use of text shadows*/
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/* use of negation sudo class*/
+nav a:not(:last-child)::after{
+  content: ''; /* use of generated content*/
+  width: 0%;
+  display: block;
+  height: 0.26rem;
+  background: grey;
+  margin: auto;
+  transition: 0.5s;
 }
 nav .logo{ /* styling for my name logo */
   font-size: 1.5rem;
@@ -315,10 +335,10 @@ h1,h2[target]{
 }
 .home-img .img-box::before,
 .home-img .img-box::after{
-  content: '';
+  content: ''; /* use of generated  content */
   position: absolute;
-  width: 640px;
-  height: 630px;
+  width: 690px;
+  height: 700px;
   z-index: -3;
   background: conic-gradient(transparent, transparent, transparent, #0f0f0f ); /* use of conic gradient*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.55); /* use of shadows*/
@@ -328,6 +348,7 @@ h1,h2[target]{
 .home-img .img-box::after{
   animation-delay: -5s; /* animation delay*/
 }
+
 /* use of keyframes for animation*/
 @keyframes rotate-border {
   100%{
@@ -408,8 +429,8 @@ h1,h2[target]{
       font-size: 20px; /* Increase paragraph size */
   }
   .home-img .img-box {
-      width: 25vw; /* Adjust image size for larger screens */
-      height: 25vw; /* Maintain aspect ratio */
+      width: 20vw; /* Adjust image size for larger screens */
+      height: 20vw; /* Maintain aspect ratio */
   }
 }
 /* New media query for 1080px width (Pixel 7 and similar screens) */
@@ -569,6 +590,10 @@ h1,h2[target]{
   nav i{
     color: var(--text-color);
   }
+  /* use of next sibling relation selector " + " */
+  #SideBar-active + .open-sidebar-btn {
+    cursor: pointer;
+ }
   .open-sidebar-btn, .close-sidebar-btn{
     padding: 20px;
     display: block; /*  this is to show the icons when its on mobile mode*/
@@ -636,13 +661,17 @@ HR{
   gap: 1.5rem;
   margin-top: 1rem;
 }
-.social-media-links i{
-  font-size: 1.2rem;
-  color: black;
+/* use of relational selectors "> - child combinator*/
+.social-media-links ul > li > a > i {
+  color: #0d0d0d;
+  font-size: 1.5rem;
 }
-.social-media-links i:hover{
-  color: darkgrey;
+/* use of hover relational selectors "> - child combinator*/
+.social-media-links ul > li > a > i:hover{
+  color: #007bff;
 }
+
+
 
 
  /*About page*/
@@ -851,11 +880,14 @@ li[title~="project"] {
   font-weight: 500;
   color: var(--text-color);
 }
-.contact .content p{
+/* use of next sibling relational selector "h2 + p" */
+.contact .content h2 + p {
+  margin-top: 1rem;
   font-size: 3rem;
   font-weight: 300;
   color: var(--text-color);
 }
+
 .container{
   width: 100%;
   display: flex;
@@ -883,6 +915,11 @@ li[title~="project"] {
   border-radius: 50%;
   font-size: 22px;
 }
+/* use of relational selector " > - child combinator*/
+.contactInfo .box > .icon {
+  color: #e40d0d;
+}
+
 .container .contactInfo .box::before{
   min-width: 60px;
   height: 60px;
@@ -944,6 +981,7 @@ li[title~="project"] {
   outline: none;
   resize: none;
 }
+
 .contactForm .inputBox span{
   position: absolute;
   left: 0;
@@ -954,8 +992,8 @@ li[title~="project"] {
   transition: 0.5s;
   color: #666;
 }
- /* this is for the validation AND ANIMATIONS*/
-.contactForm .inputBox input:focus ~ span,
+ /* this is for ANIMATIONS*/
+.contactForm .inputBox input:focus ~ span, /* use of subsequent sibling relational selector "input ~ span"*/
 .contactForm .inputBox input:valid ~ span,
 .contactForm .inputBox textarea:focus ~ span,
 .contactForm .inputBox textarea:valid ~ span{
@@ -991,6 +1029,41 @@ li[title~="project"] {
 .contactForm .inputBox input[type="reset"]:hover{
   background:var(--color-1);
 }
+
+/* the validation */
+
+/* check for Valid text input fields */
+.contactForm .inputBox input[type="text"]:valid {
+  border-color: var(--valid-color);
+}
+.contactForm .inputBox input[type="text"]:invalid {
+  border-color: var(--invalid-color);
+}
+
+/*  check for Valid email input fields */
+.contactForm .inputBox input[type="email"]:valid {
+  border-color: var(--valid-color);
+}
+.contactForm .inputBox input[type="email"]:invalid {
+  border-color: var(--invalid-color);
+}
+
+/* check for Valid phone number input fields */
+.contactForm .inputBox input[type="tel"]:valid {
+  border-color: var(--valid-color);
+}
+.contactForm .inputBox input[type="tel"]:invalid {
+  border-color: var(--invalid-color);
+}
+
+/* check for Valid textarea fields */
+.contactForm .inputBox textarea:valid {
+  border-color: var(--valid-color);
+}
+.contactForm .inputBox textarea:invalid {
+  border-color: var(--invalid-color);
+}
+
 
 
 /* blogs page*/
