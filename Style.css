@@ -190,6 +190,12 @@ h1,h2[target]{
   margin-top: -10px;
 }
 
+/* use of negation  pseudo class */
+h2:not(.home-info h2) {
+  color: #333;
+  font-size: 2.5rem;
+}
+
 .home-info h2 span{
   position: relative;
   display: inline-block;
@@ -654,6 +660,7 @@ HR{
 .footer-p{
   margin-top: 2.5rem  ;
 }
+
 .social-media-links ul{
   list-style: none;
   display: flex;
@@ -661,11 +668,18 @@ HR{
   gap: 1.5rem;
   margin-top: 1rem;
 }
+
+/* using negation selector "not" */
+.footer-content ul li:not(:first-child) a i {
+  color: #0d0d0d; /* Styling for all links except the first one */
+}
+
 /* use of relational selectors "> - child combinator*/
 .social-media-links ul > li > a > i {
   color: #0d0d0d;
   font-size: 1.5rem;
 }
+
 /* use of hover relational selectors "> - child combinator*/
 .social-media-links ul > li > a > i:hover{
   color: #007bff;
@@ -703,6 +717,7 @@ h1[title~="About"]{
   margin: auto;
   justify-content: center;
 }
+
 .about-pic img{
   box-shadow: 8px 1px 14px rgba(0, 0, 0, 0.25);
   border: #d3d3d3 2px solid;
@@ -743,15 +758,12 @@ p[title~="paragraph"]{
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.about-Details-info{
-  margin-top: -3rem;
-  padding: 1rem;
-  flex: 0.17;
-  background: #fff;
-  border-radius: 2rem;
-  border: #333 1px solid;
-  text-align: center;
+
+ /* */
+.about-Details-info:not(:last-child) {
+  margin-bottom: 1rem; /* Add spacing except for the last child */
 }
+
 .text-container{
   margin-top: 1rem;
   font-size: 1.5rem;
@@ -915,6 +927,7 @@ li[title~="project"] {
   border-radius: 50%;
   font-size: 22px;
 }
+
 /* use of relational selector " > - child combinator*/
 .contactInfo .box > .icon {
   color: #e40d0d;
@@ -1030,8 +1043,20 @@ li[title~="project"] {
   background:var(--color-1);
 }
 
-/* the validation */
+/* use of negation selector "input:not([type="submit"])*/
+.contactForm .inputBox input[type="submit"]:not([type="reset"]) {
+  border-radius: 5px;
+  background: #368df2;
+}
 
+/* use of negation selector "input:not([type="submit"])*/
+.contactForm .inputBox input[type="submit"]:not([type="reset"]):hover {
+  background: #2b814b;
+}
+
+
+
+/* the validation */
 /* check for Valid text input fields */
 .contactForm .inputBox input[type="text"]:valid {
   border-color: var(--valid-color);
