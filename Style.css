@@ -1499,6 +1499,7 @@ code:not([target="_blank"]){
   color: #f4f4f9;
   font-size: 1rem;
   font-weight: 500;
+  overflow-wrap: anywhere;
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -1518,5 +1519,11 @@ code:not([target="_blank"]){
 
   .content {
       padding: 1rem;
+  }
+  .css-example code{
+    width: 50%;
+    object-fit: cover;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
   }
 }
