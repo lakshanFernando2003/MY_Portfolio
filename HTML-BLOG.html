@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding HTML & CSS:</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/96fec09fbf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    * {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    body{
+      background-color: #f4f4f9;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Lakshan</div>  <!-- Logo -->
+    <!-- SideBar Toggle -->
+    <input type="checkbox" id="SideBar-active">
+    <label for="SideBar-active" class="open-sidebar-btn">
+      <i class="fa-solid fa-bars" ></i>
+    </label>
+    <label for="SideBar-active" id="overlay"></label>
+      <!-- SideBar  menu Links -->
+    <div class="links-container">
+        <label for="SideBar-active" class="close-sidebar-btn">
+          <i class="fa-solid fa-xmark" ></i>
+        </label>
+        <a class="menu-link" href="HOME.html">Home</a>
+        <a class="menu-link" href="About.html">About</a>
+        <a class="menu-link" href="Blogs.html">Blogs</a>
+        <a class="menu-link" href="contact.html">Contact</a>
+      </div>
+  </nav>
+  <!-- blog page content-->
+  <header class="header">
+    <h1>Understanding HTML & CSS: Foundations of the Web</h1>
+</header>
+
+<main class="content">
+    <section class="intro">
+        <p>In the world of web development, HTML and CSS are the essential building blocks of the web. Whether you’re browsing a blog, shopping online, or reading an article like this, HTML and CSS work behind the scenes to structure and style each page. But what exactly are they, and what advancements have come with HTML5? Let’s dive in.</p>
+    </section>
+
+    <section class="section">
+        <h2>What is HTML?</h2>
+        <p><strong>HTML (Hypertext Markup Language)</strong> is the standard language used to create and structure content on the web. It’s like the blueprint of a webpage, providing a foundation to arrange text, images, links, and other elements.</p>
+        <h3>Key Roles of HTML:</h3>
+        <ul>
+            <li><strong>Content Structure:</strong> Organizes text, images, videos, and other media on the page.</li>
+            <li><strong>Hyperlinks:</strong> Allows pages to link to one another, creating a network of information.</li>
+            <li><strong>Accessibility:</strong> Provides information to search engines and assistive technologies for improved accessibility.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>What is CSS?</h2>
+        <p><strong>CSS (Cascading Style Sheets)</strong> is what brings style and flair to HTML's structure. It’s used to control the visual presentation, including colors, fonts, spacing, and layout.</p>
+        <h3>Key Roles of CSS:</h3>
+        <ul>
+            <li><strong>Visual Design:</strong> Adds colors, borders, shadows, and other styling elements.</li>
+            <li><strong>Responsive Layouts:</strong> Makes websites adapt to different screen sizes and devices.</li>
+            <li><strong>Animations and Transitions:</strong> Brings movement to pages, enhancing user experience.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>HTML vs. HTML5: What’s New?</h2>
+        <p>HTML has evolved over time, with HTML5 representing the most recent major update. Released in 2014, HTML5 introduced a range of modern features to adapt to the growing needs of the web. Let's take a closer look at the key differences and additions that make HTML5 stand out.</p>
+    </section>
+
+    <section class="features">
+        <h2>Key Differences & New Features in HTML5</h2>
+        <h3>Semantic Elements</h3>
+        <p>HTML5 introduces tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> to clearly define document sections, improving SEO and accessibility.</p>
+
+        <h3>Multimedia Support</h3>
+        <p>HTML5 simplifies adding multimedia content with the <code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code> elements, eliminating the need for plugins like Flash.</p>
+
+        <h3>Canvas and SVG for Graphics</h3>
+        <p>The <code>&lt;canvas&gt;</code> element enables drawing graphics on the web, ideal for games and data visualization.</p>
+
+        <h3>Improved Form Elements</h3>
+        <p>HTML5 provides more form control options, with new input types like <code>email</code>, <code>date</code>, <code>number</code>, and <code>range</code>, enhancing user experience.</p>
+    </section>
+
+    <section class="concepts">
+        <h2>Additional HTML5 Concepts and Applications</h2>
+        <ul>
+            <li><strong>Difference Between <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code>:</strong> <code>&lt;article&gt;</code> represents self-contained content; <code>&lt;aside&gt;</code> complements the main content.</li>
+            <li><strong>Use of <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> Tags:</strong> <code>&lt;header&gt;</code> typically contains introductory content, while <code>&lt;footer&gt;</code> provides closure.</li>
+            <li><strong>One Benefit of HTML5:</strong> Efficiency and performance, as HTML5 supports native media and graphics, reducing reliance on plugins.</li>
+            <li><strong><code>&lt;datetime&gt;</code> in HTML5:</strong> Standardizes date and time representation, improving handling of time-sensitive data.</li>
+        </ul>
+    </section>
+
+    <section class="css-example">
+        <h2>CSS Example: Styling a Header with a Gradient Background</h2>
+        <pre><code target="_blank">header {
+          background: linear-gradient(to right, #ff7e5f, #feb47b, #86a8e7);
+          text-align: center;
+          }
+          </code></pre>
+    </section>
+</main>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer-content">
+    <HR></HR>
+    <p class="footer-p"> 2024  |  Designed by Lakshan</p>
+    <div class="social-media-links">
+      <ul>
+        <li><a href="https://github.com/lakshanFernando2003/MY_Portfolio.git"><i class="fa-brands fa-square-github"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100083272787172"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/_laksh__an_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/lakshan-fernando-770037294?trk=contact-info"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
