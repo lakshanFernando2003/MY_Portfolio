@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MY Portfolio</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/96fec09fbf.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Style.css">
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Lakshan</div>  <!-- Logo -->
+    <!-- SideBar Toggle -->
+    <input type="checkbox" id="SideBar-active">
+    <label for="SideBar-active" class="open-sidebar-btn">
+      <i class="fa-solid fa-bars" ></i>
+    </label>
+    <label for="SideBar-active" id="overlay"></label>
+      <!-- SideBar  menu Links -->
+    <div class="links-container">
+        <label for="SideBar-active" class="close-sidebar-btn">
+          <i class="fa-solid fa-xmark" ></i>
+        </label>
+        <a class="menu-link" href="HOME.html">Home</a>
+        <a class="menu-link" href="About.html">About</a>
+        <a class="menu-link" href="Blogs.html">Blogs</a>
+        <a class="menu-link" href="contact.html">Contact</a>
+      </div>
+  </nav>
+  <!-- Home page content-->
+  <div class="bars-animation">
+    <div class="bars" style="--i:8;"></div>
+    <div class="bars" style="--i:7;"></div>
+    <div class="bars" style="--i:6;"></div>
+    <div class="bars" style="--i:5;"></div>
+    <div class="bars" style="--i:4;"></div>
+    <div class="bars" style="--i:3;"></div>
+    <div class="bars" style="--i:2;"></div>
+    <div class="bars" style="--i:1;"></div>
+  </div>
+
+  <section class="home">
+    <div class="home-info">
+      <!-- use of attribute selector target value -->
+      <h1 target="_blank">Hello,</h1>
+      <h1> I'm Lakshan</h1>
+       <!-- use of attribute selector target value -->
+      <h2 target="_blank">I'm a
+        <span style="--i:4;" data-text="Undergraduate">Undergraduate</span>
+        <span style="--i:3;" data-text="Frontend developer">Frontend developer</span>
+        <span style="--i:2;" data-text="UI/UX Designer">UI/UX Designer</span>
+        <span style="--i:1;" data-text="backend developer">backend developer </span>
+      </h2>
+      <p>I am passionate about creating engaging and user-friendly web experiences.
+         I have a strong foundation in HTML,CSS, and JavaScript. I am committed to
+          staying up-to-date with the latest web development trends and
+         technologies. I am dedicated to delivering high-quality work that
+          exceeds client expectations.
+         </p>
+
+        <div class="btn-sci">
+        <a href=""  class="btn">Download CV <i class='bx bxs-download'></i></a>
+        <div class="sci">
+            <a href="https://www.facebook.com/profile.php?id=100083272787172">
+              <i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/_laksh__an_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                <i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/lakshanFernando2003/MY_Portfolio.git">  <i class='bx bxl-github'></i></a>
+            <a href="www.linkedin.com/in/lakshan-fernando-770037294">  <i class='bx bxl-linkedin'></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="home-img">
+       <div class="img-box">
+        <div class="img-item">
+          <img src="Assets/home.png" alt="">
+        </div>
+       </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- Footer -->
+
+  <footer class="footer-content">
+    <HR></HR>
+    <p class="footer-p"> 2024  |  Designed by Lakshan</p>
+    <div class="social-media-links">
+      <ul>
+        <li><a href="https://github.com/lakshanFernando2003/MY_Portfolio.git"><i class="fa-brands fa-square-github"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100083272787172"><i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/_laksh__an_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/lakshan-fernando-770037294?trk=contact-info"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
