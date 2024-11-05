@@ -532,7 +532,7 @@ h2:not(.home-info h2) {
   .home-img .img-box {
       width: 80vw; /* Responsive image size */
       height: 80vw; /* Maintain aspect ratio */
-      margin-top: 2rem;
+      margin-top: 10rem;
   }
 
 }
